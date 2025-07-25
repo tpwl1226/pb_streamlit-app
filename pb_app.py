@@ -125,9 +125,9 @@ if submitted:
             short_ior = target["IOR"] * target["PB_Usage"] / 100 - best_pb["Adj_IOR"] * pb_percent / 100
             short_iob = target["IOB"] * target["PB_Usage"] / 100 - best_pb["Adj_IOB"] * pb_percent / 100
 
-            xf_ioy = short_ioy / 2.00
-            xf_ior = short_ior / 1.80
-            xf_iob = short_iob / 2.40
+            xf_ioy = short_ioy / 0.40
+            xf_ior = short_ior / 0.45
+            xf_iob = short_iob / 0.75
             total_xfine = xf_ioy + xf_ior + xf_iob
 
             st.success(f"✅ PB 후보 2: PB {int(best_pb['PB'])} + XFINE")
